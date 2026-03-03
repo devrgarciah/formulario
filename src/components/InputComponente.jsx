@@ -1,8 +1,9 @@
 function Input({ label, tipo, valor, setValor }) {
   return (
-    <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+    <div className="flex flex-col">
       <label htmlFor={label}>{label}:</label>
       <input
+        className="bg-white text-black"
         id={label}
         type={tipo}
         value={valor}
