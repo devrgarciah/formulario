@@ -7,7 +7,7 @@ function Formulario() {
 
   function sendForm(e) {
     e.preventDefault();
-    alert(email, password);
+    console.log(email, password);
     setEmail("");
     setPassword("");
   }
