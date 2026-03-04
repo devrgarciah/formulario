@@ -14,31 +14,37 @@ function Formulario() {
   return (
     <>
       <form
-        className="bg-slate-800 text-white"
         onSubmit={sendForm}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          minHeight: "100vh",
-          gap: "10px",
-        }}
+        className="min-h-screen flex items-center justify-center bg-slate-900 "
       >
-        <h1 className="text-2xl">Formulario</h1>
-        <Input label="Correo" tipo="text" valor={email} setValor={setEmail} />
-        <Input
-          label="Contraseña"
-          tipo="password"
-          valor={password}
-          setValor={setPassword}
-        />
-        <button
-          className="bg-amber-400 text-black px-5 rounded-xl font-bold mt-3"
-          type="submit"
-        >
-          Enviar
-        </button>
+        <div className="bg-white w-full max-w-md p-8 rounded-2xl shadow-2xl border border-gray-200">
+          <h1 className="text-3xl font-semibold text-center mb-6 text-gray-800">
+            Ingresar al sistema
+          </h1>
+
+          <div className="space-y-4">
+            <Input
+              label="Correo"
+              tipo="text"
+              valor={email}
+              setValor={setEmail}
+            />
+
+            <Input
+              label="Contraseña"
+              tipo="password"
+              valor={password}
+              setValor={setPassword}
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full mt-6 bg-amber-400 hover:bg-amber-500 transition-all duration-300 text-black font-semibold py-2 rounded-xl shadow-md hover:shadow-lg"
+          >
+            Enviar
+          </button>
+        </div>
       </form>
     </>
   );
