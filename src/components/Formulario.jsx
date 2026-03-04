@@ -15,7 +15,7 @@ function Formulario() {
     <>
       <form
         onSubmit={sendForm}
-        className="min-h-screen flex items-center justify-center bg-slate-900 "
+        className="min-h-screen flex items-center justify-center bg-gray-200 "
       >
         <div className="bg-white w-full max-w-md p-8 rounded-2xl shadow-2xl border border-gray-200">
           <h1 className="text-3xl font-semibold text-center mb-6 text-gray-800">
