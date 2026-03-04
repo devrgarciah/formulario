@@ -2,15 +2,16 @@ import { useState } from "react";
 import Input from "./InputComponente";
 
 function Formulario() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({ email: "", password: "" });
 
-  function sendForm(e) {
+  const sendForm = (e) => {
     e.preventDefault();
-    console.log(email, password);
-    setEmail("");
-    setPassword("");
-  }
+    if (formData.email !== "" && formData.password !== "") {
+      alert(`Correo: ${formData.email} Password: ${formData.password}`);
+      setFormData({ email: "", password: "" });
+    }
+  };
+
   return (
     <>
       <form
@@ -25,16 +26,19 @@ function Formulario() {
           <div className="space-y-4">
             <Input
               label="Correo"
+              name="email"
               tipo="text"
-              valor={email}
-              setValor={setEmail}
+              valor={formData.email}
+              formData={formData}
+              setFormData={setFormData}
             />
-
             <Input
               label="Contraseña"
+              name="password"
               tipo="password"
-              valor={password}
-              setValor={setPassword}
+              valor={formData.password}
+              formData={formData}
+              setFormData={setFormData}
             />
           </div>
 
