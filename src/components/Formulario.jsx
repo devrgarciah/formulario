@@ -45,7 +45,7 @@ function Formulario() {
           <button
             type="submit"
             disabled={formData.email === "" || formData.password === ""}
-            className={`cursor-pointer w-full mt-6 bg-amber-400 hover:bg-amber-500 transition-all duration-300 text-black font-semibold py-2 rounded-xl shadow-md hover:shadow-lg ${(formData.email === "" || formData.password === "") && "bg-gray-300 hover:bg-gray-300"}`}
+            className={`w-full mt-6  transition-all duration-300 text-black font-semibold py-2 rounded-xl shadow-md ${formData.email === "" || formData.password === "" ? "bg-gray-300 hover:bg-gray-300" : "cursor-pointer bg-amber-400 hover:bg-amber-500 hover:shadow-lg"}`}
           >
             Enviar
           </button>
